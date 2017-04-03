@@ -5,17 +5,21 @@ DnD Dice Roller
 </head>
 <body>
   <script>
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
     var x = document.getElementById("form");
     document.getElementById("display").innerHTML = "";
     var roll;
     function roll(){
-      
+      //examines the status of each checkbox
       for(var i=0, i<=10, i=i+2){
-        
-         if(x.elements[i]){
+     //if the box is checked
+         if(x.elements[i].checked){
          
-         
+         //actually generates values for the rolls
             for(var k=1, k<=x.elements[i+1], k++){
+              roll = randomInt(1,x.elements[i].value);
              document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
              }
          
@@ -29,27 +33,27 @@ DnD Dice Roller
     
   </script>
 <form>
-d4<input type="checkbox" name="d4" checked="true">
+d4<input type="checkbox" name="d4" checked="true" value= "4">
   <input type="number" name="d4quant" value="0">
   <br>
   
-d6<input type="checkbox" name="d6" >
+d6<input type="checkbox" name="d6" value= "6">
   <input type="number" name="d6quant" value="0">
   <br>
   
-d8<input type="checkbox" name="d8" >
+d8<input type="checkbox" name="d8" value= "8">
   <input type="number" name="d8quant" value="0">
   <br>
   
-d10<input type="checkbox" name="d10" >
+d10<input type="checkbox" name="d10" value=10>
   <input type="number" name="d10quant" value="0">
   <br>
   
-  d12<input type="checkbox" name="d12" >
+  d12<input type="checkbox" name="d12" value="12">
   <input type="number" name="d12quant" value="0">
   <br>
   
-  d20<input type="checkbox" name="d20" >
+  d20<input type="checkbox" name="d20" value="20">
   <input type="number" name="d20quant" value="0">
   
 </form>
