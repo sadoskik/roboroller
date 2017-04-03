@@ -13,12 +13,12 @@
     var roll;
     function roll(){
       //examines the status of each checkbox
-      for(var i=0, i < 10, i=i+2){
+      for(var i=0; i < 10; i=i+2){
      //if the box is checked
          if(x.elements[i].checked){
          
          //actually generates values for the rolls
-            for(var k=1, k <= Number(x.elements[i+1]), k++){
+            for(var k=1; k <= Number(x.elements[i+1]); k++){
               roll = randomInt(1,x.elements[i].value);
              document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
              }
