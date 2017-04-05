@@ -15,9 +15,8 @@
     var roll;
     function roll(){
       //examines the status of each checkbox
-      for(var i=0; i < 10; i=i+2){
      //if the box is checked
-         if(x.elements[i].checked){
+         if(document.getElementById("4box").checked){
          document.getElementById("display").innerHTML = "true";
          //actually generates values for the rolls
             for(var k=1; k <= Number(x.elements[i+1]); k++){
@@ -38,27 +37,32 @@
     <div id="main">
       
   <form id="form" method="get">
-  d4<input type="checkbox" name="d4" checked="true" value= "4">
+  d4<input type="checkbox" name="d4" checked="true" value= "4" id="4box">
   <input type="number" name="d4quant" value="0">
   <br>
+    <br>
   
-  d6<input type="checkbox" name="d6" value= "6">
+  d6<input type="checkbox" name="d6" value= "6" id="6box">
   <input type="number" name="d6quant" value="0">
   <br>
+    <br>
   
-    d8<input type="checkbox" name="d8" value= "8">
+    d8<input type="checkbox" name="d8" value= "8" id="8box">
   <input type="number" name="d8quant" value="0">
   <br>
-  
-  d10<input type="checkbox" name="d10" value=10>
+    <br>
+
+  d10<input type="checkbox" name="d10" value=10 id="10box">
   <input type="number" name="d10quant" value="0">
   <br>
-  
-  d12<input type="checkbox" name="d12" value="12">
+    <br>
+
+  d12<input type="checkbox" name="d12" value="12"id="12box">
   <input type="number" name="d12quant" value="0">
   <br>
-  
-  d20<input type="checkbox" name="d20" value="20">
+    <br>
+
+  d20<input type="checkbox" name="d20" value="20" id="20box">
   <input type="number" name="d20quant" value="0">
 
 </form>
