@@ -11,7 +11,7 @@
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
     var x = document.getElementById("form");
-   document.write( "Your rolls are:");
+   document.getElementById("display").innerHTML = "Your rolls are ";
     var roll;
     function roll(){
       //examines the status of each checkbox
@@ -19,10 +19,10 @@
          if(document.getElementById("4box").checked){
          document.getElementById("display").innerHTML = "true";
          //actually generates values for the rolls
-           // for(var k=1; k <= Number(x.elements[i+1]); k++){
-              //roll = randomInt(1,x.elements[i].value);
-           //  document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
-            // }
+            for(var k=1; k <= Number(x.elements[1].value); k++){
+              roll = randomInt(1,4);
+             document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
+             }
          
           }
         
