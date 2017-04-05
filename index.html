@@ -60,17 +60,34 @@
     function roll(){
       //examines the status of each checkbox
      //if the box is checked
-      var dice = document.getElementById("4val").value;
-         if(document.getElementById("4box").checked){
-     
-         //actually generates values for the rolls
-            for(var k=1; k < Number(dice); k++){
-              roll = randomInt(1,4);
-             document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
-             }
-           document.getElementById("display").innerHTML += randomInt(1,4);
-         
-          }
+      
+      
+       //actually generates values for the rolls
+            function diceGen(sides,times){
+                       for(var k=1; k < Number(times); k++){
+                         document.getElementById("display").innerHTML += randomInt(1,sides) + "+";
+                          }
+                      document.getElementById("display").innerHTML += randomInt(1,sides);
+              
+                      }
+               if(document.getElementById("4box").checked){
+                    diceGen(4, document.getElementById("4val").value);
+               }
+                            if(document.getElementById("6box").checked){
+                    diceGen(6, document.getElementById("6val").value);
+               }
+                            if(document.getElementById("8box").checked){
+                    diceGen(8, document.getElementById("8val").value);
+               }
+                            if(document.getElementById("10box").checked){
+                    diceGen(10, document.getElementById("10val").value);
+               }
+                            if(document.getElementById("12box").checked){
+                    diceGen(12, document.getElementById("12val").value);
+               }
+                            if(document.getElementById("20box").checked){
+                    diceGen(20, document.getElementById("20val").value);
+               }
         
       }
       
