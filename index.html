@@ -64,10 +64,11 @@
          if(document.getElementById("4box").checked){
      
          //actually generates values for the rolls
-            for(var k=1; k <= Number(dice); k++){
+            for(var k=1; k < Number(dice); k++){
               roll = randomInt(1,4);
              document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
              }
+           document.getElementById("display").innerHTML += randomInt(1,4);
          
           }
         
