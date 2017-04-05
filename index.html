@@ -70,22 +70,32 @@
                       document.getElementById("display").innerHTML += randomInt(1,sides);
               
                       }
+              function add+{
+                if(sumOfCheckboxes >= 2){
+                  document.getElementById("display").innerHTML += "+";
+              }
+      var sumOfCheckboxes = Number(document.getElementById("4box").checked)
        //examines the status of each checkbox
                if(document.getElementById("4box").checked){
                     diceGen(4, document.getElementById("4val").value);
                }
+      sumOfCheckboxes += Number(document.getElementById("6box").checked)
                             if(document.getElementById("6box").checked){
                     diceGen(6, document.getElementById("6val").value);
                }
+       sumOfCheckboxes += Number(document.getElementById("8box").checked)
                             if(document.getElementById("8box").checked){
                     diceGen(8, document.getElementById("8val").value);
                }
+       sumOfCheckboxes += Number(document.getElementById("10box").checked)
                             if(document.getElementById("10box").checked){
                     diceGen(10, document.getElementById("10val").value);
                }
+       sumOfCheckboxes += Number(document.getElementById("12box").checked)
                             if(document.getElementById("12box").checked){
                     diceGen(12, document.getElementById("12val").value);
                }
+       sumOfCheckboxes += Number(document.getElementById("20box").checked)
                             if(document.getElementById("20box").checked){
                     diceGen(20, document.getElementById("20val").value);
                }
