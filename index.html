@@ -55,25 +55,30 @@
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
     var x = document.getElementById("form");
-   document.getElementById("display").innerContent ="Your rolls are ";
-    var roll;
+   
     function roll(){
       //clears the display
-     document.getElementById("display").innerHTML = "";
-      
+    
+      document.getElementById("display").innerHTML ="Your rolls are ";
+      var sum = 0;
       
        //actually generates values for the rolls
             function diceGen(sides,times){
+        var roll;
                        for(var k=1; k < Number(times); k++){
-                         document.getElementById("display").innerHTML += randomInt(1,sides) + "+";
+                         roll = randomoInt(1,sides);
+                         document.getElementById("display").innerHTML += roll + "+";
+                         sum += roll;
                           }
-                      document.getElementById("display").innerHTML += randomInt(1,sides);
+              roll = randomInt(1,sides);
+                      document.getElementById("display").innerHTML += roll
+              sum += roll;
               
                       }
               function addthing(){
-                if(sumOfCheckboxes >= 2){
+               
                   document.getElementById("display").innerHTML += "+";
-              }
+            
               }
       var sumOfCheckboxes = Number(document.getElementById("4box").checked)
        //examines the status of each checkbox
