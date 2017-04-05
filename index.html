@@ -6,7 +6,10 @@
   <title>DnD Dice Roller</title>
 </head>
 <body>
-  <script type="text/javascript">
+  
+ 
+    <div id="main">
+      <script type="text/javascript">
   function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -34,8 +37,6 @@
     
     
   </script>
- 
-    <div id="main">
       
   <form id="form" method="get">
   d4<input type="checkbox" name="d4" checked="true" value= "4" id="4box">
@@ -67,12 +68,12 @@
   <input type="number" name="d20quant" value="0" id="20val">
 
 </form>
-
+ <div id="display">
+  </div>
  
      <button onclick="roll()"> Roll!</button>
      
   </div>
-  <div id="display">
-  </div>
+ 
 </body>
 </html>
