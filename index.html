@@ -58,8 +58,8 @@
    document.getElementById("display").innerContent ="Your rolls are ";
     var roll;
     function roll(){
-      //examines the status of each checkbox
-     //if the box is checked
+      //clears the display
+     document.getElementById("display").innerHTML = ""'
       
       
        //actually generates values for the rolls
@@ -70,6 +70,7 @@
                       document.getElementById("display").innerHTML += randomInt(1,sides);
               
                       }
+       //examines the status of each checkbox
                if(document.getElementById("4box").checked){
                     diceGen(4, document.getElementById("4val").value);
                }
