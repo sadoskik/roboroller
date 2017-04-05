@@ -9,34 +9,7 @@
   
  
     <div id="main">
-      <script type="text/javascript">
-  function randomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
-    var x = document.getElementById("form");
-   document.getElementById("display").innerContent ="Your rolls are ";
-    var roll;
-    function roll(){
-      //examines the status of each checkbox
-     //if the box is checked
-      var dice = document.getElementById("4val").value;
-         if(document.getElementById("4box").checked){
-     
-         //actually generates values for the rolls
-            for(var k=1; k <= Number(dice); k++){
-              roll = randomInt(1,4);
-             document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
-             }
-         
-          }
-        
-      }
       
-      
-      
-    
-    
-  </script>
       
   <form id="form" method="get">
   d4<input type="checkbox" name="d4" checked="true" value= "4" id="4box">
@@ -77,3 +50,31 @@
  
 </body>
 </html>
+<script type="text/javascript">
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+    var x = document.getElementById("form");
+   document.getElementById("display").innerContent ="Your rolls are ";
+    var roll;
+    function roll(){
+      //examines the status of each checkbox
+     //if the box is checked
+      var dice = document.getElementById("4val").value;
+         if(document.getElementById("4box").checked){
+     
+         //actually generates values for the rolls
+            for(var k=1; k <= Number(dice); k++){
+              roll = randomInt(1,4);
+             document.getElementById("display").innerHTML =   document.getElementById("display").innerHTML + roll + "+";
+             }
+         
+          }
+        
+      }
+      
+      
+      
+    
+    
+  </script>
