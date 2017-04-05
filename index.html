@@ -76,9 +76,10 @@
               
                       }
               function addthing(){
-               
+               if(sumOfCheckboxes >= 2){
+        
                   document.getElementById("display").innerHTML += "+";
-            
+               }
               }
       var sumOfCheckboxes = Number(document.getElementById("4box").checked)
        //examines the status of each checkbox
